@@ -1,0 +1,21 @@
+ <!-- medium item -->
+
+    <div class="item-medium-1__alert" *ngIf="productItem.discount" >Sale</div>
+    <div class="item-medium-1__image image" [style]="'background-image: url('+ productItem.imagesUrls[0] +')'">
+        <a (click)="onAddedToCartPressed()" class="item-medium-1__action" [innerText]="'Add to card'" ></a>
+    </div>
+    <a [routerLink]="'/product/details/'+productItem._id">
+        <!-- / string interpolation -->
+        <h4>{{productItem.data[0].name}}</h4>
+        <div class="flex-row">
+            <div>
+                <del *ngIf="productItem.discount" >{{productItem.price}}</del>
+                <span class="lable">{{productItem.discount ? productItem.price - productItem.discount : productItem.price}}</span>
+            </div>
+        </div>
+    </a>
+    <div class="crud-actions">
+        <a href="#"><i class="far fa-eye"></i></a>
+        <a href="#"><i class="fas fa-edit"></i></a>
+        <a href="#"><i class="fas fa-trash-alt"></i></a>
+    </div>

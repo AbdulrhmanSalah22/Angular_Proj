@@ -1,0 +1,36 @@
+<div class="dropdown dropdown--left" [ngClass]="{'dropdown--opened' : isActive }" (click)="isActive = !isActive">
+    <!-- header -->
+    <div class="dropdown__header">
+        <!-- <a href="#" class="link">
+            <img class="flag flag-us" src="" alt="">
+            English
+        </a>
+        <i class="fas fa-angle-down"></i> -->
+        <ng-content select=".header"></ng-content>
+    </div>
+
+    <!-- items -->
+    <div class="dropdown__body">
+        <!-- <ul class="dropdown__items list">
+            <li class="dropdown__item list__item">
+                <a href="#" class="link">
+                    <img class="flag flag-us" src="" alt="">
+                    English
+                </a>
+            </li>
+            <li class="dropdown__item list__item">
+                <a href="#" class="link">
+                    <img class="flag flag-es" src="" alt="">
+                    Español
+                </a>
+            </li>
+            <li class="dropdown__item list__item">
+                <a href="#" class="link">
+                    <img class="flag flag-fr" src="" alt="">
+                    Française
+                </a>
+            </li> -->
+        <!-- </ul> -->
+        <ng-content select=".body"></ng-content>
+    </div>
+</div>
